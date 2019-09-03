@@ -17,7 +17,7 @@ services:
       context: .
     entrypoint: celery worker -A app --loglevel=info
     depends_on:
-      - redis
+      - rabbitmq
 
-  rabbit:
+  rabbitmq:
     image: rabbitmq:3.7.17-alpine
