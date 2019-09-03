@@ -15,7 +15,7 @@ services:
   celery:
     build:
       context: .
-    entrypoint: celery worker -A app --loglevel=info
+    entrypoint: celery worker -A app.celery --loglevel=info
     depends_on:
       - rabbitmq
 
