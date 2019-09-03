@@ -26,8 +26,8 @@ app.config['MAIL_DEFAULT_SENDER'] = 'flask@example.com'
 mail = Mail(app)
 
 # Initialize Celery
-celery = Celery(app.name,broker='amqp://',
-             backend='amqp://',)
+celery = Celery(app.name,broker='amqp://rabbitmq/',
+             backend='amqp://rabbitmq/',)
 celery.conf.update(app.config)
 
 
